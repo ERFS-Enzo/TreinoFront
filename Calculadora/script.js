@@ -15,11 +15,12 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
     operator.addEventListener('click', () => {
-        display.value += operator.textContent;
+        display.value += " " + operator.textContent + " ";
     });
 });
 
 equals.addEventListener('click', () => {
+    console.log(typeof display.value);
     try {
         display.value = math.evaluate(display.value);
     } catch (error) {
