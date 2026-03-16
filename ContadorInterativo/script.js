@@ -7,15 +7,19 @@ let count = 0;
 
 plusButton.addEventListener('click', () => {
     count++;
-    counter.innerText = count;
+    updateCounter();
 });
 
 minusButton.addEventListener('click', () => {
     count--;
-    counter.innerText = count;
+    updateCounter();
 });
 
 resetButton.addEventListener('click', () => {
     count = 0;
-    counter.innerText = count;
+    updateCounter();
 });
+
+function updateCounter() {
+    counter.innerText = count;
+}
