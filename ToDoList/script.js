@@ -7,8 +7,10 @@ addButton.addEventListener('click', () => {
     if(taskText.trim() !== ""){
         const newItem = document.createElement('li'); 
         newItem.textContent = taskText; 
+        newItem.id = "taskItem";
         const rmvButton = document.createElement('button'); //cria um botão para remover a tarefa
         rmvButton.textContent = "Remover";
+        rmvButton.id = "taskButton";
 
         rmvButton.style.height = "25px";
         rmvButton.classList.add('buttons');
@@ -17,7 +19,7 @@ addButton.addEventListener('click', () => {
         taskList.appendChild(newItem); //adiciona o <li> dentro do <ul>
 
         rmvButton.addEventListener('click', () => {
-            taskList.remove(); //remove o <li> do <ul>
+            taskList.removeChild(newItem); //remove o <li> do <ul>
         });
 
         input.value = ""; //limpa o input
