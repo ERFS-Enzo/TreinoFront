@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(32, 111, 143);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555);
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-size: 200% 100%; 
+    background-color: rgb(1, 48, 66);
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.form-group input{
+    padding: 10px;
+    font-size: 1em;
+    width: 60%;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.form-group input:focus{
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(135, 207, 235, 0.623);
+}
+.form-group button{
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(135, 207, 235, 0.623);
+}
+.form-group button:hover{
+    background-color: #f0f0f0;
+    transform: scale(1.01);
+}
+.form-group button:active{
+    transform: scale(0.98);
+}
+#weatherResult{
+    background-color: rgb(1, 48, 66);
+    padding: 20px;
+    width: 25%;
+    margin: 5% auto;
+    border-radius: 10px;
+}
+#weatherResult h2{
+    padding-bottom: 15px;
+
+}
+#weatherResult p{
+    padding-bottom: 3px;
+}
