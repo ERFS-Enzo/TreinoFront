@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.container{
+    width: 50%;
+    margin: 0 auto;
+    padding: 3%;
+
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(28, 181, 224, 0.2) 0%, rgba(0, 8, 81, 0.2) 100%);
+    background-size: 400% 400%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tab-header{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.tab-header button{
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 10vw;
+    height: 5vh;
+    margin: 0 1%;
+}
+.tab-header button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.tab-header button:active{
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(0.99);
+}
+.tab-header button:focus{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+.authForm{
+    text-align: center;
+}
+.authForm h2{
+    padding: 3% 0 1% 0;
+}
+.authForm hr{
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 5%;
+}
+.authForm label, input{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.authForm label{
+    font-size: 1.4em;
+}
+.authForm input{
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 25vw;
+    height: 8vh;
+    font-size: 1.2em;
+}
+.authForm input:focus{
+    outline: none;
+}
+
+.submitBtn{
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 10vw;
+    height: 5vh;
+}
+.submitBtn:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.submitBtn:active{
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(0.99);
+}
+
+#formCadastrar{
+    display: none;
+}
