@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="tab-header">
-            <button id="btnIn" class="active">Login</button>
+            <button id="btnIn">Login</button>
             <button id="btnUp">Cadastro</button>
         </div>
 
@@ -22,17 +22,22 @@
             <input type="password" name="password" id="password" placeholder="Digite sua senha">
             <button type="submit" class="submitBtn">Entrar</button>
         </form>
-        <form id="formCadastrar" class="authForm">
+        <form id="formRegister" class="authForm">
             <h2>Crie sua conta</h2>
             <hr>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email">
+            <input type="email" name="email" id="emailNovo" placeholder="Digite seu email">
             <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="Digite sua senha">
-            <button type="submit" class="submitBtn">Cadastrar</button>
+            <input type="password" name="password" id="passwordNovo" placeholder="Digite sua senha">
+            <button type="submit" class="submitBtn" id="submitRegister">Cadastrar</button>
         </form>
     </div>
-
+    <div class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="popupMessage">Cadastro realizado com sucesso!</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
